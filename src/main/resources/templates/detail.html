@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="@{'/css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="@{'/images/favicon.png'}"/>
+    <title>Výchozí webová stránka | Java 2</title>
+</head>
+<body>
+
+    <h1>DETAIL KONTAKTU</h1>
+    <form method="post">
+    <table>
+        <tr>
+            <td><label for="jmeno">Jmeno:</label></td>
+            <td><input type="text" id="jmeno" name="jmeno" value="Jara Cimrman"
+                       th:value="${kontakty.jmeno}"></td>
+        </tr>
+        <tr>
+            <td><label for="telefon">Telefon:</label></td>
+            <td><input type="text" id="telefon" name="telefon" value="+420123456789"
+                       th:value="${kontakty.telefon}"></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="text" id="email" name="email" value="jara@cimrman.cz"
+                       th:value="${kontakty.email}"></td>
+        </tr>
+        <tr></tr>
+            <td></td>
+        <td>
+            <input type="submit" value="Ulozit" class="button"/>
+
+             <a th:href="@{'/kontakty'}"
+                href="kontakty.html" class="button">ZPET</a>
+        </td>
+    </table>
+    </form>
+    
+</body>
+</html>

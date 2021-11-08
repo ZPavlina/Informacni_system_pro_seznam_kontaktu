@@ -1,0 +1,85 @@
+body {
+    background-color: #cecece;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Copperplate;
+    font-size: 20px;
+    color: #597195;
+    text-align: center;
+    margin: 0px 10%;
+
+}
+
+h1 {
+    text-align: center;
+    font-style: oblique;
+    color: #1c3a6e;
+    padding: 20px;
+}
+
+.tabulka tbody tr:nth-child(odd) td,
+.tabulka tbody tr:nth-child(odd) th {
+    background-color: #a6a6a6;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    padding: 30px;
+    margin: 0 30px;
+    border-top: 3px solid #868686;
+    border-botom: 3px solid #868686;
+    border-top-style: groove;
+}
+
+.tabulka thead th, .tabulka thead td {
+    color: white;
+    background-color: #1c3a6e;
+    font-weight:bold
+}
+
+td {
+    padding: 20px;
+    border-bottom: 3px solid #868686;
+    border-top: 3px solid #868686;
+    border-top-style: ridge;
+    border-bottom-style: ridge;
+}
+
+a.button:hover { background: linear-gradient(#597195,  #1c3a6e) #2444ab; }
+a.button:active { background: linear-gradient(rgba(205, 205, 205, 0.3), rgba(0, 138, 194, 0.45)) rgba(0,0,0,.1); }
+
+input.button:hover { background: linear-gradient(#597195,  #1c3a6e) #2444ab; }
+input.button:active { background: linear-gradient(rgba(205, 205, 205, 0.3), rgba(0, 138, 194, 0.45)) rgba(0,0,0,.1); }
+
+                              
+a.button10, input.button, a.button {
+    display: inline-block;
+    font-family: Copperplate;
+    color: white;
+    font-size: 100%;
+    font-weight: 300;
+    text-decoration: none;
+    user-select: none;
+    padding: .25em .5em;
+    outline: none;
+    border: 1px solid rgb(28, 58, 110);
+    border-radius: 7px;
+    background: rgba(44, 92, 175, 0.81) linear-gradient(#28529c, #1c3a6e);
+    box-shadow: inset 0 -2px 1px rgba(0,0,0,0), inset 0 1px 2px rgba(0,0,0,0), inset 0 0 0 60px rgba(255,255,0,0);
+    transition: box-shadow .2s, border-color .2s;
+}
+
+a.button10:hover { background: linear-gradient(#597195,  #1c3a6e) #2444ab; }
+
+
+a.button10:active {
+    padding: calc(.25em + 1px) .5em calc(.25em - 1px);
+    background: linear-gradient(rgba(205, 205, 205, 0.3), rgba(0, 138, 194, 0.45)) rgba(0,0,0,.1);
+    box-shadow: inset 0 -1px 1px rgba(0,0,0,.1), inset 0 1px 2px rgba(205, 205, 205, 0.3), inset 0 0 0 60px rgba(0, 138, 194, 0.45);
+}
+
+
+

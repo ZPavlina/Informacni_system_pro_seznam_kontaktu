@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="@{'/css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="@{'/images/favicon.png'}"/>
+    <title>Výchozí webová stránka | Java 2</title>
+</head>
+<body>
+    <div class="page">
+
+        <h1>Informační systém pro seznam kontaktů</h1>
+
+        <table class="tabulka">
+            <thead>
+            <tr>
+                <th>Číslo</th>
+                <th >Jméno</th>
+                <th>Telefon</th>
+                <th>Email</th>
+                <th>Akce</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="kontakt : ${kontakty}">
+                <td th:text="${kontakt.cislo}">1001</td>
+                <td th:text="${kontakt.jmeno}">Pavlina Zimmermannova</td>
+                <td th:text="${kontakt.telefon}">+420777777777</td>
+                <td th:text="${kontakt.email}">pavlinazimmermann@gmail.com</td>
+                <td>
+                    <a th:href="@{'/detail/' + ${kontakt.cislo}}"
+                       href="detail.html" class="button">Edit</a>
+
+                    <form th:action="@{'/kontakty/' + ${kontakt.cislo}}" method="post">
+                        <input type="submit" value="Smazat" class="button"/>
+                        <input type="hidden" name="method" value="DELETE"/>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                <td th:colspan="5">
+                    <a th:href="@{'/novy'}"
+                       href="detail.html" class="button10">Vytvořit nový kontakt</a>
+                </td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </div>
+</body>
+</html>
